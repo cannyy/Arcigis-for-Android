@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    tools:context=".AcrgisN1Activity" >
-
-    <TextView
+    >
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:layout_height="wrap_content" >
 
+        <Button
+            android:id="@+id/btnShow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="冷色暖色切换" />
+    </LinearLayout>
+
+    <!-- MapView layout and initial extent -->
+    <com.esri.android.map.MapView
+          android:id="@+id/map"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          >
+      </com.esri.android.map.MapView>
 </LinearLayout>
