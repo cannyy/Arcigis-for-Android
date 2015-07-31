@@ -2,6 +2,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+ 
     >
     <LinearLayout
         android:layout_width="fill_parent"
@@ -11,7 +12,7 @@
             android:id="@+id/btnShow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="冷色暖色切换" />
+            android:text="显示地图" />
     </LinearLayout>
 
     <!-- MapView layout and initial extent -->
