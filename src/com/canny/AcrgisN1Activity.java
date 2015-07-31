@@ -2,9 +2,10 @@ package com.canny;
 
 import android.app.Activity;
 import android.os.Bundle;
-
+import android.view.ViewGroup.LayoutParams;
 
 import com.esri.android.map.MapView;
+import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 
 
 public class AcrgisN1Activity extends Activity {
@@ -18,6 +19,11 @@ public class AcrgisN1Activity extends Activity {
         setContentView(R.layout.main);
 
 		mMapView = new MapView(this);
+		mMapView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		 ArcGISTiledMapServiceLayer tileLayer = new
+		ArcGISTiledMapServiceLayer("http://services.arcgisonline.com/arcgis/rest/services/ESRI_StreetMap_World_2D/MapServer");//实例化图层
+		 mMapView.addLayer(tileLayer);//添加图层到地图窗口中
+		 setContentView(mMapView);
 
     }
 
